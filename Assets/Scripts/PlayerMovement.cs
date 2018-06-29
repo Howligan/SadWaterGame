@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
     [SerializeField]
     //Variables
-    public int speed;
+    private int speed;
+    public GameObject gameManager;
 
     // Update is called once per frame
 
@@ -44,6 +45,13 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (col.gameObject.tag == "CleanWater")
         {
+            gameManager.GetComponent<GameManager>().playerScore += 10;
+            Destroy(col.gameObject);
+        }
+
+        if (col.gameObject.tag == "DirtyWater")
+        {
+            gameManager.GetComponent<GameManager>().playerHP--;
             Destroy(col.gameObject);
         }
 

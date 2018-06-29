@@ -5,10 +5,16 @@ using UnityEngine;
 public class WaterDropBrains : MonoBehaviour {
     //Variables
     [SerializeField]
-    public int fallSpeed;
-	
-	// Update is called once per frame
-	void Update () {
+    private int fallSpeed;
+    public GameManager gameManager;
+
+    private void Awake()
+    {
+        gameManager = GetComponent<GameManager>();
+    }
+
+    // Update is called once per frame
+    void Update () {
         Falling();
 	}
 
