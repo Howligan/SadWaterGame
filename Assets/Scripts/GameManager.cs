@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        gameDifficulty = 1;
         startTime = Time.time;
         playerHP = 3;
 	}
@@ -32,25 +31,30 @@ public class GameManager : MonoBehaviour {
 
     void gameDiffChanger()
     {
-        if(currentTime >= 10f)
+        if (currentTime >= 0)
+        {
+            gameDifficulty = 1;
+        }
+
+        if(currentTime >= 30f)
         {
             gameDifficulty = 2;
             Debug.Log("The difficulty has increased from 1 to 2");
         }
 
-        if(currentTime >= 20f)
+        if(currentTime >= 60f)
         {
             gameDifficulty = 3;
             Debug.Log("The difficulty has increased from 2 to 3");
         }
 
-        if (currentTime >= 30f)
+        if (currentTime >= 90f)
         {
             gameDifficulty = 4;
             Debug.Log("The difficulty has increased from 3 to 4");
         }
 
-        if(currentTime >= 40f)
+        if(currentTime >= 120f)
         {
             gameDifficulty = 5;
             Debug.Log("The difficulty has increased from 4 to 5");

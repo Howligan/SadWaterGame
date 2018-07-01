@@ -25,7 +25,7 @@ public class GroundScript : MonoBehaviour {
             Destroy(col.gameObject);
         }
 
-        if (this.gameObject.tag == "DirtyWater")
+        if (col.gameObject.tag == "DirtyWater")
         {
             Destroy(col.gameObject);
         }
