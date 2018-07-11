@@ -65,14 +65,14 @@ public class PlayerMovement : MonoBehaviour {
 
     void PlayerBounds()
     {
-        if(transform.position.x <= -8.355783f )
+        if(transform.position.x <= -3.9f)
         {
-            this.transform.position = new Vector2( -8.355783f, transform.position.y);
+            this.transform.position = new Vector2(-3.9f, transform.position.y);
         }
 
-        if (transform.position.x >= 8.355783f)
+        if (transform.position.x >= 3.9f)
         {
-            this.transform.position = new Vector2(8.355783f, transform.position.y);
+            this.transform.position = new Vector2(3.9f, transform.position.y);
         }
     }
 

@@ -36,7 +36,7 @@ public class DirtyWaterSpawner : MonoBehaviour
     {
         while (true)
         {
-            Instantiate(cleanWaterPrefab, new Vector2(Random.Range(-8.355783f, 8.355783f), 4.47f), Quaternion.identity);
+            Instantiate(cleanWaterPrefab, new Vector2(Random.Range(-3.9f, 3.9f), 8.67f), Quaternion.identity);
             yield return new WaitForSeconds(dirtySpawnSeconds);
         }
     }
