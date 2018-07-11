@@ -84,11 +84,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ScreenResolutionScript.cs" />
     <Compile Include="Assets\Scripts\DirtyWaterSpawner.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\GameOverText.cs" />
     <Compile Include="Assets\Scripts\GroundScript.cs" />
+    <Compile Include="Assets\Scripts\LifeTextScript.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\ScoreScript.cs" />
     <Compile Include="Assets\Scripts\WaterDropBrains.cs" />
     <Compile Include="Assets\Scripts\WaterDropSpawner.cs" />
   </ItemGroup>

@@ -102,20 +102,25 @@ public class PlayerMovement : MonoBehaviour {
             currentPlayerState = PlayerState.NoBottle;
             Destroy(col.gameObject);
         }
+    }
 
-        if (col.gameObject.tag == "Crate")
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Crate")
         {
-            if(playerHasBottle == false && playerWaterCount == 0)
+            if (playerHasBottle == false && playerWaterCount == 0)
             {
                 currentPlayerState = PlayerState.BottleEmpty;
+                
             }
         }
 
-        if(col.gameObject.tag == "Truck")
+        if (collision.gameObject.tag == "Truck")
         {
-            if(playerHasBottle == true && playerWaterCount == 3)
+            if (playerHasBottle == true && playerWaterCount == 3)
             {
                 currentPlayerState = PlayerState.NoBottle;
+                gameManager.GetComponent<GameManager>().playerScore++;
             }
         }
     }

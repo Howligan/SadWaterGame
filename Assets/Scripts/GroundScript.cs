@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class GroundScript : MonoBehaviour {
 
-   public GameObject gameManager;
+    public GameObject gameManager;
 
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+        if(gameManager.GetComponent<GameManager>().gameIsOver == true)
+        {
+            this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }
 		
 	}
 

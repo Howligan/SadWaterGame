@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour {
     private float startTime;
     private float currentTime;
     public int playerScore;
+    public GameObject player;
+    public bool gameIsOver = false;
 
 	// Use this for initialization
 	void Start () {
@@ -66,6 +68,8 @@ public class GameManager : MonoBehaviour {
         if(playerHP <= 0)
         {
             Debug.Log("Game is over!");
+            player.GetComponent<PlayerMovement>().enabled = false;
+            gameIsOver = true;
         }
     }
 }
