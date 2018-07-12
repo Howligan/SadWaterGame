@@ -82,11 +82,11 @@
     <Reference Include="UnityEditor.iOS.Extensions.Common">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
-    <Reference Include="TextMeshPro-5.6-Runtime">
-      <HintPath>Assets\TextMesh Pro\Plugins\Editor DLL\TextMeshPro-5.6-Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="TextMeshPro-5.6-Editor">
       <HintPath>Assets\TextMesh Pro\Plugins\Editor DLL\TextMeshPro-5.6-Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="TextMeshPro-5.6-Runtime">
+      <HintPath>Assets\TextMesh Pro\Plugins\Editor DLL\TextMeshPro-5.6-Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -95,8 +95,10 @@
     <Compile Include="Assets\Scripts\GameOverText.cs" />
     <Compile Include="Assets\Scripts\GroundScript.cs" />
     <Compile Include="Assets\Scripts\LifeTextScript.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\ScoreScript.cs" />
+    <Compile Include="Assets\Scripts\TutorialLoaderScript.cs" />
     <Compile Include="Assets\Scripts\WaterDropBrains.cs" />
     <Compile Include="Assets\Scripts\WaterDropSpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
