@@ -9,7 +9,7 @@ public class GameOverText : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        GoText = GetComponent<Text>();
+        GoText = this.GetComponent<Text>();
         GoText.enabled = false;
 	}
 	

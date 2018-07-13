@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -12,11 +13,22 @@ public class GameManager : MonoBehaviour {
     public int playerScore;
     public GameObject player;
     public bool gameIsOver = false;
+    public bool gameHasStarted = false;
+
+    public GameObject Countdown3;
+    public GameObject Countdown2;
+    public GameObject Countdown1;
+
+    public GameObject NextButton;
+
+    public int testtime;
 
 	// Use this for initialization
 	void Start () {
         startTime = Time.time;
         playerHP = 3;
+        StartCoroutine(GameStartUITimer());
+        NextButton.GetComponent<Button>().enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -70,6 +82,36 @@ public class GameManager : MonoBehaviour {
             Debug.Log("Game is over!");
             player.GetComponent<PlayerMovement>().enabled = false;
             gameIsOver = true;
+            Countdown3.GetComponent<Text>().enabled = false;
+            Countdown2.GetComponent<Text>().enabled = false;
+            Countdown1.GetComponent<Text>().enabled = false;
+
+            PlayerPrefs.SetInt("CurrentScore", playerScore);
+
+            NextButton.GetComponent<Button>().enabled = true;
         }
+    }
+
+    IEnumerator GameStartUITimer()
+    {
+        Countdown3.GetComponent<Text>().enabled = true;
+        Countdown2.GetComponent<Text>().enabled = false;
+        Countdown1.GetComponent<Text>().enabled = false;
+        testtime = 1;
+        yield return new WaitForSeconds(1);
+        Countdown3.GetComponent<Text>().enabled = false;
+        Countdown2.GetComponent<Text>().enabled = true;
+        Countdown1.GetComponent<Text>().enabled = false;
+        testtime = 2;
+        yield return new WaitForSeconds(1);
+        Countdown3.GetComponent<Text>().enabled = false;
+        Countdown2.GetComponent<Text>().enabled = false;
+        Countdown1.GetComponent<Text>().enabled = true;
+        testtime = 3;
+        yield return new WaitForSeconds(1);
+        Countdown3.GetComponent<Text>().enabled = false;
+        Countdown2.GetComponent<Text>().enabled = false;
+        Countdown1.GetComponent<Text>().enabled = false;
+        gameHasStarted = true;
     }
 }

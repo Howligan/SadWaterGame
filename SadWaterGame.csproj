@@ -91,17 +91,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\DirtyWaterSpawner.cs" />
+    <Compile Include="Assets\Scripts\EndGameScreenScript.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GameOverText.cs" />
     <Compile Include="Assets\Scripts\GroundScript.cs" />
+    <Compile Include="Assets\Scripts\HighScoreScript.cs" />
     <Compile Include="Assets\Scripts\LifeTextScript.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\ScoreScript.cs" />
+    <Compile Include="Assets\Scripts\SwitchToEndGameScreen.cs" />
     <Compile Include="Assets\Scripts\TutorialLoaderScript.cs" />
     <Compile Include="Assets\Scripts\TutorialScreenScript.cs" />
     <Compile Include="Assets\Scripts\WaterDropBrains.cs" />
     <Compile Include="Assets\Scripts\WaterDropSpawner.cs" />
+    <Compile Include="Assets\Scripts\gotomainmenu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

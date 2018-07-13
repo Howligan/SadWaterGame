@@ -226,22 +226,6 @@ public class TutorialScreenScript : MonoBehaviour {
         else
         if (StepCounter == 12)
         {
-            WelcomeText.GetComponent<Text>().enabled = false;
-            GoOverText.GetComponent<Text>().enabled = false;
-            GrabBottleText.GetComponent<Text>().enabled = false;
-            CatchWaterText.GetComponent<Text>().enabled = false;
-            DirtyWaterText.GetComponent<Text>().enabled = false;
-            NewBottleText.GetComponent<Text>().enabled = false;
-            FillBottleText.GetComponent<Text>().enabled = false;
-            BackOfTruckText.GetComponent<Text>().enabled = false;
-            ScoreText.GetComponent<Text>().enabled = false;
-            HPText.GetComponent<Text>().enabled = false;
-            LoseConText.GetComponent<Text>().enabled = false;
-            TutorialDoneText.GetComponent<Text>().enabled = true;
-        }
-        else
-        if (StepCounter == 13)
-        {
             SceneManager.LoadScene("main");
         }
     }
