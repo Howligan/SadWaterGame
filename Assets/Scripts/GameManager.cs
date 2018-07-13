@@ -24,10 +24,11 @@ public class GameManager : MonoBehaviour {
     public int testtime;
 
 	// Use this for initialization
+
 	void Start () {
+        StartCoroutine(GameStartUITimer());
         startTime = Time.time;
         playerHP = 3;
-        StartCoroutine(GameStartUITimer());
         NextButton.GetComponent<Button>().enabled = false;
 	}
 	
@@ -82,10 +83,9 @@ public class GameManager : MonoBehaviour {
             Debug.Log("Game is over!");
             player.GetComponent<PlayerMovement>().enabled = false;
             gameIsOver = true;
-            Countdown3.GetComponent<Text>().enabled = false;
-            Countdown2.GetComponent<Text>().enabled = false;
-            Countdown1.GetComponent<Text>().enabled = false;
-
+            Destroy(Countdown3);
+            Destroy(Countdown2);
+            Destroy(Countdown1);
             PlayerPrefs.SetInt("CurrentScore", playerScore);
 
             if (PlayerPrefs.GetInt("CurrentScore") >= PlayerPrefs.GetInt("HighScore"))
