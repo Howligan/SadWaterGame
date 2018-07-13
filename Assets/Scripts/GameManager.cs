@@ -88,6 +88,11 @@ public class GameManager : MonoBehaviour {
 
             PlayerPrefs.SetInt("CurrentScore", playerScore);
 
+            if (PlayerPrefs.GetInt("CurrentScore") >= PlayerPrefs.GetInt("HighScore"))
+            {
+                PlayerPrefs.SetInt("HighScore", playerScore);
+            }
+
             NextButton.GetComponent<Button>().enabled = true;
         }
     }
