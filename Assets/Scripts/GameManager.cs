@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour {
 
     public GameObject NextButton;
 
+    public GameObject LeftMovementButton;
+    public GameObject RightMovementButton;
+
     public int testtime;
 
 	// Use this for initialization
@@ -30,6 +33,8 @@ public class GameManager : MonoBehaviour {
         startTime = Time.time;
         playerHP = 3;
         NextButton.GetComponent<Button>().enabled = false;
+        LeftMovementButton.SetActive(false);
+        RightMovementButton.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -37,6 +42,18 @@ public class GameManager : MonoBehaviour {
         gameDiffTimer();
         gameDiffChanger();
         GameOver();
+
+        if(gameHasStarted == true)
+        {
+            LeftMovementButton.SetActive(true);
+            RightMovementButton.SetActive(true);
+        }
+
+        if(gameIsOver == true)
+        {
+            LeftMovementButton.SetActive(false);
+            RightMovementButton.SetActive(false);
+        }
 	}
 
     void gameDiffTimer()

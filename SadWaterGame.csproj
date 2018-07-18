@@ -90,6 +90,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CameraScreenResolution.cs" />
+    <Compile Include="Assets\Scripts\BGMusicScript.cs" />
     <Compile Include="Assets\Scripts\DirtyWaterSpawner.cs" />
     <Compile Include="Assets\Scripts\EndGameScreenScript.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -97,6 +99,7 @@
     <Compile Include="Assets\Scripts\GroundScript.cs" />
     <Compile Include="Assets\Scripts\HighScoreScript.cs" />
     <Compile Include="Assets\Scripts\LifeTextScript.cs" />
+    <Compile Include="Assets\Scripts\LongButtonPress.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\ScoreScript.cs" />

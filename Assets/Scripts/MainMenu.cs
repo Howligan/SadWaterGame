@@ -14,4 +14,9 @@ public class MainMenu : MonoBehaviour {
     {
         SceneManager.LoadScene("game");
     }
+
+    private void Update()
+    {
+        //Camera.main.ScreenPointToRay
+    }
 }

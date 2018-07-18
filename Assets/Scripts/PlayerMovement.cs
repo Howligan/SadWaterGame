@@ -48,6 +48,11 @@ public class PlayerMovement : MonoBehaviour {
                 Player33Bottle();
                 break;
         }
+
+        if(gameManager.GetComponent<GameManager>().gameIsOver == true)
+        {
+            this.GetComponent<PolygonCollider2D>().enabled = false;
+        }
 	}
 
     void TranslationMovement()
@@ -179,5 +184,15 @@ public class PlayerMovement : MonoBehaviour {
         bottle1.SetActive(false);
         bottle2.SetActive(false);
         bottle3.SetActive(true);
+    }
+
+    public void MoveLeft()
+    {
+        this.transform.Translate(new Vector2(-speed, 0) * Time.deltaTime);
+    }
+
+    public void MoveRight()
+    {
+        this.transform.Translate(new Vector2(speed, 0) * Time.deltaTime);
     }
 }
