@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour {
     public Rigidbody2D playerRbody;
     public bool playerHasBottle;
     public int playerWaterCount;
+    public bool playerBottleFull;
 
     public GameObject emptyBottle;
     public GameObject bottle1;
@@ -57,12 +58,12 @@ public class PlayerMovement : MonoBehaviour {
 
     void TranslationMovement()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || (Input.GetKey(KeyCode.LeftArrow)))
         {
             this.transform.Translate(new Vector2(-speed, 0) * Time.deltaTime);
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || (Input.GetKey(KeyCode.RightArrow)))
         {
             this.transform.Translate(new Vector2(speed, 0) * Time.deltaTime);
         }
@@ -139,6 +140,7 @@ public class PlayerMovement : MonoBehaviour {
         bottle1.SetActive(false);
         bottle2.SetActive(false);
         bottle3.SetActive(false);
+        playerBottleFull = false;
     }
 
     void Player03Bottle()
@@ -151,6 +153,7 @@ public class PlayerMovement : MonoBehaviour {
         bottle1.SetActive(false);
         bottle2.SetActive(false);
         bottle3.SetActive(false);
+        playerBottleFull = false;
     }
 
     void Player13Bottle()
@@ -162,6 +165,7 @@ public class PlayerMovement : MonoBehaviour {
         bottle1.SetActive(true);
         bottle2.SetActive(false);
         bottle3.SetActive(false);
+        playerBottleFull = false;
     }
 
     void Player23Bottle()
@@ -173,6 +177,7 @@ public class PlayerMovement : MonoBehaviour {
         bottle1.SetActive(false);
         bottle2.SetActive(true);
         bottle3.SetActive(false);
+        playerBottleFull = false;
     }
 
     void Player33Bottle()
@@ -184,6 +189,7 @@ public class PlayerMovement : MonoBehaviour {
         bottle1.SetActive(false);
         bottle2.SetActive(false);
         bottle3.SetActive(true);
+        playerBottleFull = true;
     }
 
     public void MoveLeft()

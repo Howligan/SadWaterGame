@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour {
     public GameObject LeftMovementButton;
     public GameObject RightMovementButton;
 
-    public int testtime;
+
 
 	// Use this for initialization
 
@@ -119,17 +119,14 @@ public class GameManager : MonoBehaviour {
         Countdown3.GetComponent<Text>().enabled = true;
         Countdown2.GetComponent<Text>().enabled = false;
         Countdown1.GetComponent<Text>().enabled = false;
-        testtime = 1;
         yield return new WaitForSeconds(1);
         Countdown3.GetComponent<Text>().enabled = false;
         Countdown2.GetComponent<Text>().enabled = true;
         Countdown1.GetComponent<Text>().enabled = false;
-        testtime = 2;
         yield return new WaitForSeconds(1);
         Countdown3.GetComponent<Text>().enabled = false;
         Countdown2.GetComponent<Text>().enabled = false;
         Countdown1.GetComponent<Text>().enabled = true;
-        testtime = 3;
         yield return new WaitForSeconds(1);
         Countdown3.GetComponent<Text>().enabled = false;
         Countdown2.GetComponent<Text>().enabled = false;

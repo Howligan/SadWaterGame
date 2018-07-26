@@ -90,8 +90,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CameraScreenResolution.cs" />
     <Compile Include="Assets\Scripts\BGMusicScript.cs" />
+    <Compile Include="Assets\Scripts\CrateBrain.cs" />
     <Compile Include="Assets\Scripts\DirtyWaterSpawner.cs" />
     <Compile Include="Assets\Scripts\EndGameScreenScript.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -104,6 +104,7 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\ScoreScript.cs" />
     <Compile Include="Assets\Scripts\SwitchToEndGameScreen.cs" />
+    <Compile Include="Assets\Scripts\TruckBrain.cs" />
     <Compile Include="Assets\Scripts\TutorialLoaderScript.cs" />
     <Compile Include="Assets\Scripts\TutorialScreenScript.cs" />
     <Compile Include="Assets\Scripts\WaterDropBrains.cs" />

@@ -8,6 +8,8 @@ public class TutorialScreenScript : MonoBehaviour {
 
     public GameObject WelcomeText;
     public GameObject GoOverText;
+    public GameObject ControlLeftText;
+    public GameObject ControlRightText;
     public GameObject GrabBottleText;
     public GameObject CatchWaterText;
     public GameObject DirtyWaterText;
@@ -32,10 +34,12 @@ public class TutorialScreenScript : MonoBehaviour {
 
     void InfoCounter()
     {
-        if (StepCounter == 0)
+        if (StepCounter == 0) // Welcome Text
         {
             WelcomeText.GetComponent<Text>().enabled = true;
             GoOverText.GetComponent<Text>().enabled = false;
+            ControlLeftText.GetComponent<Text>().enabled = false;
+            ControlRightText.GetComponent<Text>().enabled = false;
             GrabBottleText.GetComponent<Text>().enabled = false;
             CatchWaterText.GetComponent<Text>().enabled = false;
             DirtyWaterText.GetComponent<Text>().enabled = false;
@@ -48,10 +52,12 @@ public class TutorialScreenScript : MonoBehaviour {
             TutorialDoneText.GetComponent<Text>().enabled = false;
         }
         else
-        if (StepCounter == 1)
+        if (StepCounter == 1) // Go Over Text
         {
             WelcomeText.GetComponent<Text>().enabled = false;
             GoOverText.GetComponent<Text>().enabled = true;
+            ControlLeftText.GetComponent<Text>().enabled = false;
+            ControlRightText.GetComponent<Text>().enabled = false;
             GrabBottleText.GetComponent<Text>().enabled = false;
             CatchWaterText.GetComponent<Text>().enabled = false;
             DirtyWaterText.GetComponent<Text>().enabled = false;
@@ -64,10 +70,48 @@ public class TutorialScreenScript : MonoBehaviour {
             TutorialDoneText.GetComponent<Text>().enabled = false;
         }
         else
-        if (StepCounter == 2)
+        if (StepCounter == 2) // Control Left Text
         {
             WelcomeText.GetComponent<Text>().enabled = false;
             GoOverText.GetComponent<Text>().enabled = false;
+            ControlLeftText.GetComponent<Text>().enabled = true;
+            ControlRightText.GetComponent<Text>().enabled = false;
+            GrabBottleText.GetComponent<Text>().enabled = false;
+            CatchWaterText.GetComponent<Text>().enabled = false;
+            DirtyWaterText.GetComponent<Text>().enabled = false;
+            NewBottleText.GetComponent<Text>().enabled = false;
+            FillBottleText.GetComponent<Text>().enabled = false;
+            BackOfTruckText.GetComponent<Text>().enabled = false;
+            ScoreText.GetComponent<Text>().enabled = false;
+            HPText.GetComponent<Text>().enabled = false;
+            LoseConText.GetComponent<Text>().enabled = false;
+            TutorialDoneText.GetComponent<Text>().enabled = false;
+        }
+        else
+         if (StepCounter == 3) // Control Right Text
+        {
+            WelcomeText.GetComponent<Text>().enabled = false;
+            GoOverText.GetComponent<Text>().enabled = false;
+            ControlLeftText.GetComponent<Text>().enabled = false;
+            ControlRightText.GetComponent<Text>().enabled = true;
+            GrabBottleText.GetComponent<Text>().enabled = false;
+            CatchWaterText.GetComponent<Text>().enabled = false;
+            DirtyWaterText.GetComponent<Text>().enabled = false;
+            NewBottleText.GetComponent<Text>().enabled = false;
+            FillBottleText.GetComponent<Text>().enabled = false;
+            BackOfTruckText.GetComponent<Text>().enabled = false;
+            ScoreText.GetComponent<Text>().enabled = false;
+            HPText.GetComponent<Text>().enabled = false;
+            LoseConText.GetComponent<Text>().enabled = false;
+            TutorialDoneText.GetComponent<Text>().enabled = false;
+        }
+        else
+        if (StepCounter == 4) // Grab Bottle Text
+        {
+            WelcomeText.GetComponent<Text>().enabled = false;
+            GoOverText.GetComponent<Text>().enabled = false;
+            ControlLeftText.GetComponent<Text>().enabled = false;
+            ControlRightText.GetComponent<Text>().enabled = false;
             GrabBottleText.GetComponent<Text>().enabled = true;
             CatchWaterText.GetComponent<Text>().enabled = false;
             DirtyWaterText.GetComponent<Text>().enabled = false;
@@ -80,10 +124,12 @@ public class TutorialScreenScript : MonoBehaviour {
             TutorialDoneText.GetComponent<Text>().enabled = false;
         }
         else
-         if (StepCounter == 3)
+        if (StepCounter == 5) // Catch Water Text
         {
             WelcomeText.GetComponent<Text>().enabled = false;
             GoOverText.GetComponent<Text>().enabled = false;
+            ControlLeftText.GetComponent<Text>().enabled = false;
+            ControlRightText.GetComponent<Text>().enabled = false;
             GrabBottleText.GetComponent<Text>().enabled = false;
             CatchWaterText.GetComponent<Text>().enabled = true;
             DirtyWaterText.GetComponent<Text>().enabled = false;
@@ -96,10 +142,12 @@ public class TutorialScreenScript : MonoBehaviour {
             TutorialDoneText.GetComponent<Text>().enabled = false;
         }
         else
-        if (StepCounter == 4)
+         if (StepCounter == 6) // Dirty Water Text
         {
             WelcomeText.GetComponent<Text>().enabled = false;
             GoOverText.GetComponent<Text>().enabled = false;
+            ControlLeftText.GetComponent<Text>().enabled = false;
+            ControlRightText.GetComponent<Text>().enabled = false;
             GrabBottleText.GetComponent<Text>().enabled = false;
             CatchWaterText.GetComponent<Text>().enabled = false;
             DirtyWaterText.GetComponent<Text>().enabled = true;
@@ -112,10 +160,12 @@ public class TutorialScreenScript : MonoBehaviour {
             TutorialDoneText.GetComponent<Text>().enabled = false;
         }
         else
-        if (StepCounter == 5)
+        if (StepCounter == 7) // New Bottle Text
         {
             WelcomeText.GetComponent<Text>().enabled = false;
             GoOverText.GetComponent<Text>().enabled = false;
+            ControlLeftText.GetComponent<Text>().enabled = false;
+            ControlRightText.GetComponent<Text>().enabled = false;
             GrabBottleText.GetComponent<Text>().enabled = false;
             CatchWaterText.GetComponent<Text>().enabled = false;
             DirtyWaterText.GetComponent<Text>().enabled = false;
@@ -128,10 +178,12 @@ public class TutorialScreenScript : MonoBehaviour {
             TutorialDoneText.GetComponent<Text>().enabled = false;
         }
         else
-         if (StepCounter == 6)
+        if (StepCounter == 8) // Fill Bottle Text
         {
             WelcomeText.GetComponent<Text>().enabled = false;
             GoOverText.GetComponent<Text>().enabled = false;
+            ControlLeftText.GetComponent<Text>().enabled = false;
+            ControlRightText.GetComponent<Text>().enabled = false;
             GrabBottleText.GetComponent<Text>().enabled = false;
             CatchWaterText.GetComponent<Text>().enabled = false;
             DirtyWaterText.GetComponent<Text>().enabled = false;
@@ -144,10 +196,12 @@ public class TutorialScreenScript : MonoBehaviour {
             TutorialDoneText.GetComponent<Text>().enabled = false;
         }
         else
-        if (StepCounter == 7)
+         if (StepCounter == 9) // Back of Truck Text
         {
             WelcomeText.GetComponent<Text>().enabled = false;
             GoOverText.GetComponent<Text>().enabled = false;
+            ControlLeftText.GetComponent<Text>().enabled = false;
+            ControlRightText.GetComponent<Text>().enabled = false;
             GrabBottleText.GetComponent<Text>().enabled = false;
             CatchWaterText.GetComponent<Text>().enabled = false;
             DirtyWaterText.GetComponent<Text>().enabled = false;
@@ -160,10 +214,12 @@ public class TutorialScreenScript : MonoBehaviour {
             TutorialDoneText.GetComponent<Text>().enabled = false;
         }
         else
-        if (StepCounter == 8)
+        if (StepCounter == 10) // Score Text
         {
             WelcomeText.GetComponent<Text>().enabled = false;
             GoOverText.GetComponent<Text>().enabled = false;
+            ControlLeftText.GetComponent<Text>().enabled = false;
+            ControlRightText.GetComponent<Text>().enabled = false;
             GrabBottleText.GetComponent<Text>().enabled = false;
             CatchWaterText.GetComponent<Text>().enabled = false;
             DirtyWaterText.GetComponent<Text>().enabled = false;
@@ -176,10 +232,12 @@ public class TutorialScreenScript : MonoBehaviour {
             TutorialDoneText.GetComponent<Text>().enabled = false;
         }
         else
-         if (StepCounter == 9)
+        if (StepCounter == 11) // HP text
         {
             WelcomeText.GetComponent<Text>().enabled = false;
             GoOverText.GetComponent<Text>().enabled = false;
+            ControlLeftText.GetComponent<Text>().enabled = false;
+            ControlRightText.GetComponent<Text>().enabled = false;
             GrabBottleText.GetComponent<Text>().enabled = false;
             CatchWaterText.GetComponent<Text>().enabled = false;
             DirtyWaterText.GetComponent<Text>().enabled = false;
@@ -192,10 +250,12 @@ public class TutorialScreenScript : MonoBehaviour {
             TutorialDoneText.GetComponent<Text>().enabled = false;
         }
         else
-        if (StepCounter == 10)
+        if (StepCounter == 12) // Lose Con Text
         {
             WelcomeText.GetComponent<Text>().enabled = false;
             GoOverText.GetComponent<Text>().enabled = false;
+            ControlLeftText.GetComponent<Text>().enabled = false;
+            ControlRightText.GetComponent<Text>().enabled = false;
             GrabBottleText.GetComponent<Text>().enabled = false;
             CatchWaterText.GetComponent<Text>().enabled = false;
             DirtyWaterText.GetComponent<Text>().enabled = false;
@@ -208,10 +268,12 @@ public class TutorialScreenScript : MonoBehaviour {
             TutorialDoneText.GetComponent<Text>().enabled = false;
         }
         else
-        if (StepCounter == 11)
+        if (StepCounter == 13) // Tutorial Done Text
         {
             WelcomeText.GetComponent<Text>().enabled = false;
             GoOverText.GetComponent<Text>().enabled = false;
+            ControlLeftText.GetComponent<Text>().enabled = false;
+            ControlRightText.GetComponent<Text>().enabled = false;
             GrabBottleText.GetComponent<Text>().enabled = false;
             CatchWaterText.GetComponent<Text>().enabled = false;
             DirtyWaterText.GetComponent<Text>().enabled = false;
@@ -224,7 +286,7 @@ public class TutorialScreenScript : MonoBehaviour {
             TutorialDoneText.GetComponent<Text>().enabled = true;
         }
         else
-        if (StepCounter == 12)
+        if (StepCounter == 14)
         {
             SceneManager.LoadScene("main");
         }
